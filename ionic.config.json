@@ -1,0 +1,7 @@
+{
+  "name": "IntelligentTaskList",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
