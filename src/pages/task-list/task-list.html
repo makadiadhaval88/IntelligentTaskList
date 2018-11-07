@@ -1,0 +1,67 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>My Task List</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let item of currentItems">
+      <button ion-item (click)="openItem(item)">
+        <ion-avatar item-start>
+          <img [src]="item.profilePic" />
+        </ion-avatar>
+        <h2>{{item.name}}</h2>
+        <p>{{item.about}}</p>
+        <ion-note item-end *ngIf="item.note">{{item.note}}</ion-note>
+      </button>
+
+      <ion-item-options>
+        <button ion-button color="danger" (click)="deleteItem(item)">
+          {{ 'DELETE_BUTTON' | translate }}
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-fab right bottom>
+    <button ion-fab color="primary">
+      <ion-icon name="add" (click)="addNewTask()"></ion-icon>
+    </button>
+  </ion-fab>
+
+</ion-content>
+
+
+<!--
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Your TaskList</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-label>Task 1</ion-label>
+    <ion-checkbox color="dark" checked="false"></ion-checkbox>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Task 2</ion-label>
+    <ion-checkbox color="dark" checked="false"></ion-checkbox>
+  </ion-item>
+
+  <ion-fab right bottom>
+    <button ion-fab  color="primary">
+      <ion-icon name="add" (click)="addNewTask()"></ion-icon>
+    </button>
+  </ion-fab>
+
+</ion-content> 
+-->

@@ -1,0 +1,24 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Add New Task</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item>
+      <ion-label fixed>Task Description</ion-label>
+      <ion-input type="text" [(ngModel)]="taskDescription" name="taskDescription"></ion-input>
+    </ion-item>
+
+    <div padding>
+      <button ion-button color="primary" (click) = addNewTask()>Add New Task</button>
+    </div>
+
+  </ion-list>
+
+</ion-content>
